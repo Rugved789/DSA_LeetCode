@@ -1,10 +1,10 @@
 class Solution {
-    public int sum (int num){
+    public int sum(int num){
         int result = 0;
         while(num>0){
-        int digit = num % 10;
-        result = result+(digit*digit);
-        num=num/10;
+            int digit = num % 10;
+            result = result + (digit*digit);
+            num=num/10;
         }
         return result;
     }
@@ -15,7 +15,6 @@ class Solution {
             slow = sum(slow);
             fast = sum(fast);
             fast = sum(fast);
-
             if(slow==fast && fast!=1){
                 return false;
             }
