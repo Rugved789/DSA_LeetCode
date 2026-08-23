@@ -1,17 +1,15 @@
 class Solution {
     public int maxSubArray(int[] nums) {
-        if (nums == null || nums.length == 0) return 0;
-        int bestending=nums[0];
-        int ans = nums[0];
+        int bestsum=nums[0];
+        int maxsum=nums[0];
 
         for(int i=1;i<nums.length;i++){
-            int val1=bestending+nums[i];
-            int val2=nums[i];
+            int val1 = nums[i]+bestsum;
+            int val2 = nums[i];
 
-            bestending=Math.max(val1,val2);
-            ans=Math.max(ans,bestending);
+            bestsum = Math.max(val1,val2);
+            maxsum = Math.max(maxsum,bestsum);
         }
-
-        return ans;
+        return maxsum;
     }
 }
