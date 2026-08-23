@@ -13,7 +13,7 @@ class Solution {
                 if(sum<0){
                     j++;
                 }
-                else if (sum>0){
+                else  if(sum>0){
                     k--;
                 }
                 else{
@@ -27,7 +27,6 @@ class Solution {
                 }
             }
         }
-        return ans;
+         return ans;
     }
-
 }
