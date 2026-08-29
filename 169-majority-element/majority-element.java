@@ -5,8 +5,6 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             if(count==0){
                 candidate=nums[i];
-                count++;
-                continue;
             }
             if(nums[i]==candidate){
                 count++;
